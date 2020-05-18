@@ -25,7 +25,7 @@ namespace GiftRaffle.App.Controllers
                Name = "Oktay"
             });
 
-            return Ok("Thanks");
+            return Ok("well done !");
         }
     }
 }
