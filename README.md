@@ -1,6 +1,6 @@
 # rabbitmq-gift-raffle
 
-- This application shows us to rabbitmq with using MassTransit in .Net Core 3.0 with the history of gift raffle to 10k lucky employees. 
+- This application shows us to RabbitMQ with using MassTransit in .Net Core 3.0 with the history of gift raffle to 10k lucky employees. 
 
  # Getting Started
 
@@ -26,7 +26,7 @@ If you want to decleare your own username and password;
 docker run -d --hostname my-rabbit --name my-rabbit -e RABBITMQ_DEFAULT_USER=oktydag -e RABBITMQ_DEFAULT_PASS=123456 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 
-Then you can look deafult RabbitMQ port : 
+Then you can look default RabbitMQ port : 
 
 ```
 http://localhost:15672/
