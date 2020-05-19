@@ -15,12 +15,13 @@ namespace GiftRaffle.EmailNotificationService
                 cfg.ReceiveEndpoint(RabbitMQConstants.RabbitMqEmailNotificationQueueName, e =>
                 {
                     e.Consumer<GiftRaffleApprovedEventConsumer>();
-                    e.UseMessageRetry(r => r.Immediate(5));
+                    e.UseMessageRetry(r => r.Immediate(2)); // if you want to retry
+                    e.UseRateLimit(10000, TimeSpan.FromMinutes(1)); // if you want to limit 
                 });
             });
 
             bus.StartAsync();
-            Console.WriteLine("Listening Email Notification for approved events.. Press enter to exit");
+            Console.WriteLine("Listening Email Notification ");
             Console.ReadLine();
             bus.StopAsync();
 

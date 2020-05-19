@@ -9,7 +9,8 @@ namespace GiftRaffle.SMSNotificationService
     {
         public async Task Consume(ConsumeContext<IApprovedEmployeeEvent> context)
         {
-            await Console.Out.WriteLineAsync($"SMS sent: id {context.Message.Id} and Name : {context.Message.EmployeeName}  " );
+            // Do SMS operation.
+            await Console.Out.WriteLineAsync($"SMS sent for this employee --> Name: {context.Message.EmployeeName} - SMS: {context.Message.EmployeePhoneNumber} - Operation Id: {context.Message.Id}");
         }
     }
 }

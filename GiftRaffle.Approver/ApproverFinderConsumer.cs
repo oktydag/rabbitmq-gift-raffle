@@ -17,7 +17,9 @@ namespace GiftRaffle.Approver
             context.Publish<IApprovedEmployeeEvent>(new
             {
                 Id = guid,
-                EmployeeName = message.Name
+                EmployeeName = message.Name,
+                EmployeeEmail = message.Email,
+                EmployeePhoneNumber = message.PhoneNumber
             });
 
             return Task.CompletedTask;

@@ -16,11 +16,11 @@ namespace GiftRaffle.SMSNotificationService
                 cfg.ReceiveEndpoint(RabbitMQConstants.RabbitMqSmsNotificationQueueName, e =>
                 {
                     e.Consumer<GiftRaffleApprovedEventConsumer>();
-                    e.UseRateLimit(1000, TimeSpan.FromMinutes(1));
+                    //e.UseRateLimit(10000, TimeSpan.FromMinutes(1));
                 });
             });
             bus.StartAsync();
-            Console.WriteLine("Listening SMS Notification for approved events.. Press enter to exit");
+            Console.WriteLine("Listening SMS Notification ");
             Console.ReadLine();
             bus.StopAsync();
 

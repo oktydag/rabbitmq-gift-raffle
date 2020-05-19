@@ -9,7 +9,8 @@ namespace GiftRaffle.EmailNotificationService
     {
         public async Task Consume(ConsumeContext<IApprovedEmployeeEvent> context)
         {
-            await Console.Out.WriteLineAsync($"Email sent. id {context.Message.Id} and  Name : {context.Message.EmployeeName}  " );
+            // DO Email Operation.
+            await Console.Out.WriteLineAsync($"Email sent for this employee --> Name: {context.Message.EmployeeName} - Email: {context.Message.EmployeeEmail} - Operation Id: {context.Message.Id}" );
         }
     }
 }

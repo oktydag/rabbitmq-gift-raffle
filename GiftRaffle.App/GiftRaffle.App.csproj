@@ -14,5 +14,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MassTransit.RabbitMQ" Version="6.3.0" />
+    <PackageReference Include="Faker" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RaffleServices\" />
+    <Folder Include="RaffleServices\Contracts\" />
   </ItemGroup>
 </Project>
