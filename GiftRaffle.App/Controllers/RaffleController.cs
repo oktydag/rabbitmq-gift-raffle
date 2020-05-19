@@ -18,14 +18,15 @@ namespace GiftRaffle.App.Controllers
             _fakeDataService = fakeDataService;
         }
 
-
-
-        // GET: api/giftraffle
+        /// <summary>
+        /// * That is a Provider on RabbitMQ    
+        /// * Due to fake data library, I assume that random generated Phone Numbers and Email Addresses belong that Employee.
+        /// * GET: api/giftraffle
+        /// </summary>
+        /// <returns>lucky employee names</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-
-            // Due to fake data library, I assume that random generated Phone Numbers and Email Addresses belong that Employee.
 
             StringBuilder responseMessageBuilder = new StringBuilder();
 
@@ -52,7 +53,6 @@ namespace GiftRaffle.App.Controllers
                 });
 
                 responseMessageBuilder.AppendLine($"{i+1}- {luckyEmployee}");
-
             }
 
             responseMessageBuilder.AppendLine("*************");
