@@ -47,7 +47,7 @@ namespace GiftRaffle.App.Controllers
                 await endPoint.Send<IEmployee>(new
                 {
                     Name = luckyEmployee,
-                    PhoneNumber = _fakeDataService.GetPhoneNumber(),
+                    PhoneNumber = _fakeDataService.GetPhoneNumber(), // Due to fakedata lib does not any relation between name and number.
                     Email = _fakeDataService.GetEmailAddressByEmployeeName(luckyEmployee)
                 });
 
