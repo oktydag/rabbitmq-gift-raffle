@@ -6,7 +6,7 @@ namespace GiftRaffle.Contracts
 {
     public static class BusConfigurator
     {
-        public static IBusControl ConfigureBus(Action<IRabbitMqBusFactoryConfigurator, IRabbitMqHost> registrationAction = null)
+        public static IBusControl ConfigureBus(Action<IRabbitMqBusFactoryConfigurator, IRabbitMqHost> giftRaffleAction = null)
         {
             return Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
@@ -16,7 +16,7 @@ namespace GiftRaffle.Contracts
                     hst.Password(RabbitMQConstants.RabbitMqPassword);
                 });
 
-                registrationAction?.Invoke(cfg, host);
+                giftRaffleAction?.Invoke(cfg, host);
             });
 
         }
