@@ -30,13 +30,9 @@ namespace GiftRaffle.Approver
             });
 
             bus.StartAsync();
-
-
-            Console.WriteLine("Listening for Approvals " +
-                              "Press enter to exit");
+            
+            Console.WriteLine("Listening for Approvals ");
             Console.ReadLine();
-
- 
 
             bus.StopAsync();
 

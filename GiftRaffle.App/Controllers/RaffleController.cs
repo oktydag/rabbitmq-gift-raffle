@@ -19,7 +19,7 @@ namespace GiftRaffle.App.Controllers
         }
 
         /// <summary>
-        /// * That is a Provider on RabbitMQ    
+        /// * That is a Producer on RabbitMQ    
         /// * Due to fake data library, I assume that random generated Phone Numbers and Email Addresses belong that Employee.
         /// * GET: api/giftraffle
         /// </summary>
