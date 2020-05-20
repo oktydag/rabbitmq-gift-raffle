@@ -17,13 +17,13 @@ git clone https://github.com/oktydag/rabbitmq-gift-raffle.git
 Run RabbitMQ container with default **Username: guest** and **Password: guest**
 
 ```
-docker run -d --hostname my-rabbit --name my-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+docker run -d --hostname your-rabbit --name your-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 
 If you want to decleare your own username and password;
 
 ```
-docker run -d --hostname my-rabbit --name my-rabbit -e RABBITMQ_DEFAULT_USER=oktydag -e RABBITMQ_DEFAULT_PASS=123456 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+docker run -d --hostname oktydag-rabbitmq --name oktydag-rabbitmq -e RABBITMQ_DEFAULT_USER=oktydag -e RABBITMQ_DEFAULT_PASS=123456 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
 
 Then you can look default RabbitMQ port : 
